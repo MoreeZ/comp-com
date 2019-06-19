@@ -1,0 +1,178 @@
+.user-profile * {
+  color: white;
+}
+
+.user-profile {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.profile-left-bar {
+  background-color: #1d202a;
+  border: white 2px solid;
+  height: 100%;
+  width: 250px;
+  margin-right: 20px;
+}
+
+.profile-left-bar ul {
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+.profile-left-bar ul li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  font-size: 18px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+.profile-left-bar ul li:hover {
+  background-color: #2b2f3d;
+}
+
+.profile-left-bar ul li span {
+  position: absolute;
+  left: 60px;
+}
+
+.profile-name-and-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.profile-name-and-pic img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.profile-right-bar {
+  flex: 1;
+}
+
+.profile-right-container h1 {
+  font-family: "Open Sans Condensed";
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+  /* background-color: pink; */
+  margin-bottom: 18px;
+}
+
+/* ======================= PERSONAL DETAILS ========================== */
+
+.personal-details {
+  display: flex;
+  flex-direction: column;
+  background-color: #1b1c22;
+  /* padding-left: 10px; */
+  /* background: none; */
+  border: white 2px solid;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.profile-each-detail {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  /* margin-top: 20px; */
+  /* margin-bottom: 20px; */
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  /* border-bottom: 1px solid white; */
+}
+
+/* .profile-each-detail input:hover + .firstName {
+  border: black 1px solid;
+} */
+
+.profile-each-detail > label {
+  /* line-height: 36px; */
+  width: 170px;
+  margin: 0;
+  font-size: 18px;
+  color: #888;
+}
+
+.profile-each-detail > span {
+  font-size: 30px;
+  display: flex;
+  width: 100%;
+  margin-right: 30px;
+  /* background-color: aqua; */
+  height: 32px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.profile-each-detail > span > input {
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background: none;
+  border: none;
+  height: 32px;
+  line-height: 32px;
+  font-size: 22px;
+  flex: 1;
+  padding-left: 4px;
+  border-bottom: 1px white solid;
+}
+
+.profile-each-detail > span > i {
+  font-size: 16px;
+  align-self: flex-start;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.focus-underline {
+  position: relative;
+  overflow: hidden;
+}
+
+.focus-underline div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: rgb(119, 38, 38) 1px solid;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: transform 350ms ease;
+}
+
+.focus-underline input:focus + div,
+.focus-underline .req-input:valid + div {
+  transform: translateX(0%);
+}
+
+.focus-underline input:invalid {
+  box-shadow: none;
+}
+
+.personal-details .buttons > button {
+  width: 100px;
+  height: 40px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.personal-details .buttons {
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+.personal-details button:hover {
+  color: rgb(187, 187, 187);
+}

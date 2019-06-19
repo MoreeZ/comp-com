@@ -1,0 +1,111 @@
+.search-page * {
+  color: white;
+}
+
+.search-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+.searchpage-left-bar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 16px;
+  background-color: #1d202a;
+  margin-right: 30px;
+  align-items: center;
+  border: white 2px solid;
+}
+
+.searchpage-right-container {
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  padding: 0;
+}
+
+.search-render-space {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.sorting-filters {
+  list-style-type: none;
+  width: 100%;
+}
+
+.sorting-filters > * {
+  margin-bottom: 14px;
+}
+
+.sorting-filters h4 {
+  font-weight: bold;
+}
+
+.price-filter .from-to input {
+  width: 56px;
+  height: 22px;
+  margin-left: 6px;
+  margin-right: 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.price-filter .from-to button {
+  background: #1b1c22;
+  padding-left: 7px;
+  padding-right: 7px;
+  border: 2px white solid;
+}
+.price-filter .from-to button:hover {
+  background: #1d202a;
+}
+.price-filter .from-to button:active {
+  background: #242835;
+}
+
+.each-brand {
+  position: relative;
+}
+.each-brand .checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  background: #1b1c22;
+  border: white solid 2px;
+  box-sizing: initial !important;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  right: 0;
+  bottom: 12px;
+}
+
+.sorting-filters .checkbox:before {
+  content: "\2714";
+  font-size: 13px;
+  width: 13px;
+  height: 13px;
+  opacity: 0;
+  transition: 0.1s;
+  position: absolute;
+  color: #fff;
+  padding-left: 2px;
+  line-height: 13px;
+  box-sizing: border-box;
+}
+
+.sorting-filters .checkbox:checked:before {
+  background-color: #1b1c22;
+  opacity: 1;
+}
+
+.search-page .on-sale-tag {
+  right: 10px;
+  color: orange;
+}
+
+.search-page .on-sale-tag * {
+  color: orange;
+}

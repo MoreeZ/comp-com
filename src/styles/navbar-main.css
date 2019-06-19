@@ -1,0 +1,247 @@
+.Navigation-bar {
+  background-color: #1b1c22;
+  display: flex;
+  position: fixed;
+  min-height: 60px;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+.Navigation-bar * {
+  transition: all 0.3s ease-in-out;
+}
+
+/* ==================== LEFT PART ===================== */
+.Navigation-bar .left-container {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.Navigation-bar .dropdown-icon {
+  height: 24px;
+  cursor: pointer;
+}
+
+.Navigation-bar .left-container a,
+.Navigation-bar .left-container a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-family: "Russo One", sans-serif;
+  font-size: 18px;
+}
+.Navigation-bar .red-dot {
+  color: red;
+}
+.Navigation-bar .left-container a {
+  margin-left: 90px;
+}
+
+/* ====================== SEARCH BAR ======================== */
+.search-bar-container {
+  display: flex;
+  max-width: 600px;
+}
+
+.search-bar {
+  position: relative;
+  height: 30px;
+  flex: 1;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Roboto";
+  background: #303139;
+  padding-left: 5px;
+  border-radius: 4px;
+}
+
+.search-bar label {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.search-bar .content-name {
+  position: absolute;
+  bottom: 3px;
+  left: 5px;
+  transition: all 0.2s ease-in;
+}
+
+.search-bar input:focus + .label-name .content-name,
+.search-bar input:valid + .label-name .content-name {
+  opacity: 0;
+}
+
+.search-bar .label-name::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.search-bar input:hover + .label-name::after {
+  opacity: 1;
+}
+
+.search-bar img {
+  height: 22px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  opacity: 0.3;
+}
+
+/* =================== RIGHT PART ===================== */
+
+.Navigation-bar .right-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding-right: 10px;
+  /* background-color: darkblue; */
+}
+
+.sign-in,
+.create-an-account {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: hidden;
+  transition: none;
+}
+
+.sign-in:hover,
+.create-an-account:hover,
+.cart-icon:hover {
+  color: #b2b8ca;
+}
+
+.sign-in {
+  margin-left: 25px;
+}
+
+.create-an-account {
+  margin-left: 25px;
+}
+
+.sign-in:hover,
+.create-an-account:hover {
+  background: none;
+  border: none;
+  text-shadow: black 1px 1px 10px;
+}
+.sign-in > span:hover {
+  text-decoration: underline;
+}
+
+.signed-in-profile-pic {
+  height: 32px;
+  margin-left: 30px;
+  margin-right: 5px;
+}
+
+.Navigation-bar .cart-icon-container {
+  position: relative;
+}
+
+.Navigation-bar .cart-icon {
+  height: 34px;
+  cursor: pointer;
+  margin-left: 25px;
+  margin-right: 3px;
+}
+
+.Navigation-bar .navbar-quantity {
+  position: absolute;
+  left: 58px;
+  bottom: -3px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: none;
+  font-family: "Oswald";
+  /* background-color: pink; */
+}
+
+/* ==================== NAVBAR CHANGES WITH WINDOW WIDTH ===================== */
+@media (min-width: 985px) {
+  .Navigation-bar {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Navigation-bar .left-container {
+    min-width: 320px;
+  }
+  .search-bar-container {
+    flex: 1;
+  }
+}
+@media (max-width: 984px) {
+  .Navigation-bar {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Navigation-bar .left-container {
+    min-width: 120px;
+  }
+  .Navigation-bar .left-container a {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .search-bar-container {
+    flex: 1;
+  }
+}
+@media (max-width: 670px) {
+  .Navigation-bar {
+    justify-content: center;
+  }
+  .Navigation-bar .left-container {
+    width: 670px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+  .Navigation-bar .left-container a {
+    margin-left: 0px;
+    flex: 1;
+    text-align: center;
+    margin-right: 24px;
+  }
+  .search-bar-container {
+    width: 600px;
+  }
+  .Navigation-bar .right-container {
+    width: 670px;
+    min-width: 300px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+  }
+  .sign-in {
+    margin: 0;
+  }
+}

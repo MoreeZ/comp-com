@@ -1,0 +1,20 @@
+.favourites-quick-detail {
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+}
+
+.favourites-quick-detail > li {
+  text-align: end;
+  color: rgb(148, 146, 161);
+}
+
+.move-to-basket-button {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.favourites-min-width {
+  min-width: 700px;
+}

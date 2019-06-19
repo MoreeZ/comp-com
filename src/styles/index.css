@@ -1,0 +1,85 @@
+/* v Imports v */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Sans|Roboto|Russo+One|Open+Sans|Oswald");
+/* ^ Imports ^ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2c2d34;
+  font-family: Roboto, "Open Sans";
+  padding-right: 0px !important;
+  overflow-y: scroll !important;
+  scrollbar-color: #2c2d34 rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+.top-padding {
+  padding-top: 90px;
+}
+
+@media (max-width: 670px) {
+  .top-padding {
+    padding-top: 170px;
+  }
+}
+
+/* logo */
+.comp-logo,
+.comp-logo :hover {
+  text-decoration: none;
+  color: white;
+  font-family: "Russo One", sans-serif;
+  font-size: 18px;
+}
+.red-dot {
+  color: red !important;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+/* SCREEN LOADER BEFORE DATA ARRIVES FROM FIREBASE */
+
+.loading-screen {
+  color: #f3f3f3;
+  font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #2c2d34;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin-right: 30px;
+}
+.loading-area {
+  display: flex;
+  align-items: center;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

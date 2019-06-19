@@ -1,0 +1,68 @@
+.my-history {
+  padding-left: 0;
+  padding-right: 0;
+}
+.each-date-header {
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+}
+.each-date-header > h1 {
+  color: white;
+  font-family: "Open Sans Condensed";
+  font-size: 50px;
+}
+.date-header-right {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+.date-header-right > span {
+  color: white;
+  cursor: pointer;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-user-select: none;
+}
+.date-header-right > span:hover {
+  text-decoration: underline;
+}
+.date-header-right > select {
+  height: 26px;
+  width: 100px;
+}
+.each-date {
+  margin-top: 20px;
+}
+.date-heading {
+  color: white;
+}
+
+.history-render-space {
+  display: flex;
+  flex-direction: column;
+}
+.history-render-space a {
+  color: rgb(214, 214, 214);
+}
+
+.History-Modal {
+  padding: 10px;
+}
+
+.History-Modal .confirm-footer {
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.History-Modal .confirm-footer span {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+.History-Modal .confirm-footer span:hover {
+  text-decoration: underline;
+}
