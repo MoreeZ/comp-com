@@ -25,7 +25,7 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Route exact path="/" component={LandingPage} />
-          <Route exact path="/detail" component={ProductDetail} />
+          <Route path="/detail" component={ProductDetail} />
           <Route path="/product/:product_id" component={ProductDetail} />
           <Route path="/cart" component={Cart} />
           <Route path="/login" component={LoginPage} />
